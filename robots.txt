@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://brittanychiang.com/sitemap/sitemap-index.xml
-Host: https://brittanychiang.com
+Sitemap: https://keletsomakofane.com/sitemap/sitemap-index.xml
+Host: https://keletsomakofane.com
