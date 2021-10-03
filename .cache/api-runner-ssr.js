@@ -17,7 +17,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/keletsomakofane/Documents/_gitrepos/KeletsoMakofane.github.io/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"BrittanyChiang","short_name":"BrittanyChiang","start_url":"/","background_color":"#020c1b","theme_color":"#0a192f","display":"minimal-ui","icon":"src/images/logo.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"dedd91ab2778735e31d0a7ccbb422fb7"},
+      options: {"plugins":[],"name":"KeletsoMakofane","short_name":"KeletsoMakofane","start_url":"/","background_color":"#020c1b","theme_color":"#0a192f","display":"minimal-ui","icon":"src/images/logo.png","include_favicon":false,"legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","cacheDigest":"dedd91ab2778735e31d0a7ccbb422fb7"},
     },{
       name: 'gatsby-plugin-offline',
       plugin: require('/Users/keletsomakofane/Documents/_gitrepos/KeletsoMakofane.github.io/node_modules/gatsby-plugin-offline/gatsby-ssr'),
@@ -25,7 +25,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-google-analytics',
       plugin: require('/Users/keletsomakofane/Documents/_gitrepos/KeletsoMakofane.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"UA-45666519-2","head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
+      options: {"plugins":[],"trackingId":"UA-45666519-2","head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0,"enableWebVitalsTracking":false},
     }]
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:
