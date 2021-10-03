@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://keletsomakofane.com/sitemap/sitemap-index.xml
+Host: https://keletsomakofane.com
