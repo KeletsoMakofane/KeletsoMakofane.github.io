@@ -16,10 +16,6 @@ const NeoGraph = (props) => {
       collabweight,
   } = props;
 
-  // const queryString = window.location.search;
-  // const urlParams = new URLSearchParams(queryString);
-  // const searchname = urlParams.get('name');
-  // const collabweight = urlParams.get('weight');
 
   const visRef = useRef();
 
@@ -46,10 +42,10 @@ const NeoGraph = (props) => {
       relationships: {
         "CO_AUTH": {
           caption: false,
-          thickness: 'weight'
+          thickness: 'count'
                     }
                 },
-                initial_cypher: "MATCH (p:Author {name: '" + searchname + "' }) CALL apoc.path.subgraphAll(p, {relationshipFilter: 'CO_AUTH', labelFilter: 'Author',  maxLevel: 1}) YIELD nodes, relationships WITH nodes MATCH (a:Author)-[c:CO_AUTH]-(b:Author) WHERE a IN nodes AND b IN nodes AND c.weight >=" + collabweight + " RETURN a, b, c"
+                initial_cypher: "MATCH (a:Author {name: '" + searchname + "' }) CALL apoc.path.subgraphAll(a, {maxLevel: 2}) YIELD nodes, relationships WITH nodes, relationships MATCH (c)-[:WROTE]-(p:Paper)-[:WROTE]-(d) WHERE c IN nodes AND d IN nodes WITH c, d, collect(p.title) as titles, count(p) as collaborations WHERE collaborations >=" + collabweight + " CALL apoc.create.vRelationship(c, 'CO_AUTH', {titles:titles, count:collaborations}, d) YIELD rel as collab WHERE c.name < d.name RETURN c, d, collab"
     };
     const vis = new Neovis(config);
     vis.render();

@@ -1,14 +1,23 @@
 import React from "react";
 import { ResponsiveNeoGraph } from '@components';
+import styled from 'styled-components';
+
+const StyledForm = styled.section`
+  text-align: center;
+
+`;
 
 class NeoGraphContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {name: 'Makofane K',
-                  weight: 2};
+                  weight: 1,
+                  queryName: 'Makofane K',
+                  queryWeight: 1};
 
     this.handleChangeN = this.handleChangeN.bind(this);
     this.handleChangeW = this.handleChangeW.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
@@ -20,6 +29,12 @@ class NeoGraphContainer extends React.Component {
     this.setState({weight: event.target.value});
   }
 
+  handleSubmit(event){
+      this.setState({queryName: this.state.name,
+                           queryWeight: this.state.weight });
+      event.preventDefault();
+  }
+
 
   render() {
       const containerId = this.props.containerId
@@ -28,15 +43,13 @@ class NeoGraphContainer extends React.Component {
       const neo4jPassword = this.props.neo4jPassword
 
     return (
-        <div>
-            <form >
-                <label>
-                    Researcher:
+        <StyledForm>
+            <form onSubmit = {this.handleSubmit}>
+
+                    Researcher  &nbsp;
                     <input type="text" value={this.state.name} onChange={this.handleChangeN} />
-                </label>
-                <label>
-                    <br/>
-                    Minimum Collaborations:
+&emsp;
+                    Minimum Strength of Connections  &nbsp;
                     <select  name="weight" id = "weight" value = {this.state.weight} onChange={this.handleChangeW}>
                         <option value="1" selected>1</option>
                         <option value="2">2</option>
@@ -46,7 +59,14 @@ class NeoGraphContainer extends React.Component {
                         <option value="10">10</option>
                         <option value="20">20</option>
                     </select>
-                </label>
+&emsp;
+                <input type="submit"/>
+                {/*<input type='text' list='listid'/>*/}
+                {/*    <datalist id='listid'>*/}
+                {/*        <option  value='value1'/>*/}
+                {/*        <option  value='value2'/>*/}
+                {/*    </datalist>*/}
+
             </form>
 
             <div className="App">
@@ -55,11 +75,11 @@ class NeoGraphContainer extends React.Component {
                     neo4jUri={neo4jUri}
                     neo4jUser={neo4jUser}
                     neo4jPassword={neo4jPassword}
-                    searchname={this.state.name}
-                    collabweight={this.state.weight}/>
+                    searchname={this.state.queryName}
+                    collabweight={this.state.queryWeight}/>
             </div>
 
-        </div>
+        </StyledForm>
 
     );
   }
