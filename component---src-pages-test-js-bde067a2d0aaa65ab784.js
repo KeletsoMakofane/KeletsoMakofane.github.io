@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkv4=self.webpackChunkv4||[]).push([[672],{235:function(e,n,r){r.r(n);var a=r(5870),o=r(7294);n.default=function(){return o.createElement(a.SD,{containerId:"id0",neo4jUri:"bolt://54.165.217.90:7687",neo4jUser:"neo4j",neo4jPassword:"qIjxu0-muqrip-xepdir",searchname:"Makofane K",collabweight:1})}}}]);
+//# sourceMappingURL=component---src-pages-test-js-bde067a2d0aaa65ab784.js.map
