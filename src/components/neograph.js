@@ -26,6 +26,7 @@ import Neovis from "neovis.js/dist/neovis.js";
                 server_url: neo4jUri,
                 server_user: neo4jUser,
                 server_password: neo4jPassword,
+                encrypted: "ENCRYPTION_ON",
                 labels: {
                     "Author": {
                         caption: "name",
@@ -84,8 +85,8 @@ import Neovis from "neovis.js/dist/neovis.js";
     const ResponsiveNeoGraph = (props) => {
         const [resizeListener, sizes] = useResizeAware();
 
-        const side = Math.max(sizes.width, sizes.height) / 2;
-        const neoGraphProps = {...props, width: 2.5 * side, height: 2 * side};
+        const height = sizes.width / 1.97;
+        const neoGraphProps = {...props, width: sizes.width, height: height};
         return (
             <div style={{position: "relative"}}>
                 {resizeListener}

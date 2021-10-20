@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const StyledForm = styled.section`
   text-align: center;
+  background-color: #000000;
 
 `;
 

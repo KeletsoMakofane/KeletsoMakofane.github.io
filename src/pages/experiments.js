@@ -2,17 +2,19 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { navDelay } from '@utils';
-import { Layout } from '@components';
 import { usePrefersReducedMotion } from '@hooks';
 import NeoGraphContainer from "../components/neographcontainer";
+import { GlobalStyle, theme } from '@styles';
+import { ThemeProvider } from 'styled-components';
 
-const NEO4J_URI =  "bolt://54.165.217.90:7687";
+const NEO4J_URI =  "neo4j://graph.keletsomakofane.com";
 const NEO4J_USER = "neo4j";
-const NEO4J_PASSWORD = "qIjxu0-muqrip-xepdir";
+const NEO4J_PASSWORD = "gybsuv-merqaj-8Vuvsi";
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
 `;
+
 
 
 const PubMedPage = ({ location }) => {
@@ -28,15 +30,19 @@ const PubMedPage = ({ location }) => {
     return () => clearTimeout(timeout);
   }, []);
 
-
+useEffect (() => {document.body.style.backgroundColor = "black"; document.body.style.color = "grey"})
 
   return (
-    <Layout location={location}>
-      <StyledMainContainer>
-          <NeoGraphContainer containerId={"id0"} neo4jUri={NEO4J_URI} neo4jUser={NEO4J_USER} neo4jPassword={NEO4J_PASSWORD}/>
-        {/*</div>*/}
-      </StyledMainContainer>
-    </Layout>
+      <>
+        <ThemeProvider theme={theme}>
+
+          <StyledMainContainer>
+            <NeoGraphContainer containerId={"id0"} neo4jUri={NEO4J_URI} neo4jUser={NEO4J_USER} neo4jPassword={NEO4J_PASSWORD}/>
+
+          </StyledMainContainer>
+
+          </ThemeProvider>
+      </>
   );
 };
 
@@ -45,3 +51,4 @@ PubMedPage.propTypes = {
 };
 
 export default PubMedPage;
+
