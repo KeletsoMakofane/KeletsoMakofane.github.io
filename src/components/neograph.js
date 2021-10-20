@@ -32,7 +32,7 @@ import Neovis from "neovis.js/dist/neovis.js";
                         caption: "name",
                         size: "pagerank",
                         community: 'auth_community',
-                        title_properties: ["name", "pagerank"],
+                        title_properties: ["name"],
                         shape: "diamond",
                         font: {
                             color: "blue",
@@ -44,10 +44,10 @@ import Neovis from "neovis.js/dist/neovis.js";
                 relationships: {
                     "CO_AUTH": {
                         caption: false,
-                        thickness: 'count'
+                        thickness: 'count',
                     }
                 },
-                initial_cypher: "MATCH (a:Author {name: '" + searchname + "' }) CALL apoc.path.subgraphAll(a, {maxLevel: 2}) YIELD nodes, relationships WITH nodes, relationships MATCH (c)-[:WROTE]-(p:Paper)-[:WROTE]-(d) WHERE c IN nodes AND d IN nodes WITH c, d, collect(p.title) as titles, count(p) as collaborations WHERE collaborations >=" + collabweight + " CALL apoc.create.vRelationship(c, 'CO_AUTH', {titles:titles, count:collaborations}, d) YIELD rel as collab WHERE c.name < d.name RETURN c, d, collab"
+                 initial_cypher: "MATCH (a:Author {name: '" + searchname + "' }) CALL apoc.path.subgraphAll(a, {maxLevel: 2}) YIELD nodes, relationships WITH nodes, relationships MATCH (c)-[:WROTE]-(p:Paper)-[:WROTE]-(d) WHERE c IN nodes AND d IN nodes WITH c, d, collect(p.title) as titles, count(p) as collaborations WHERE collaborations >=" + collabweight + " CALL apoc.create.vRelationship(c, 'CO_AUTH', {titles:titles, count:collaborations}, d) YIELD rel as collab WHERE c.name < d.name RETURN c, d, collab;"
             };
             const vis = new Neovis(config);
             vis.render();
@@ -85,7 +85,7 @@ import Neovis from "neovis.js/dist/neovis.js";
     const ResponsiveNeoGraph = (props) => {
         const [resizeListener, sizes] = useResizeAware();
 
-        const height = sizes.width / 1.97;
+        const height = sizes.width / 2.25;
         const neoGraphProps = {...props, width: sizes.width, height: height};
         return (
             <div style={{position: "relative"}}>

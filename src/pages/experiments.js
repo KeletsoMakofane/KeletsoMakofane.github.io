@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { navDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
 import NeoGraphContainer from "../components/neographcontainer";
-import { GlobalStyle, theme } from '@styles';
+import { GlobalStyleNetworkVis, theme } from '@styles';
 import { ThemeProvider } from 'styled-components';
 
 const NEO4J_URI =  "neo4j://graph.keletsomakofane.com";
@@ -30,7 +30,7 @@ const PubMedPage = ({ location }) => {
     return () => clearTimeout(timeout);
   }, []);
 
-useEffect (() => {document.body.style.backgroundColor = "black"; document.body.style.color = "grey"})
+useEffect (() => {document.body.style.backgroundColor = "black"})
 
   return (
       <>
