@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkv4=self.webpackChunkv4||[]).push([[2],{7430:function(e,n,t){t.r(n);var a=t(7294),l=t(4709);n.default=function(){return a.createElement("div",{className:"App",style:{fontFamily:"Quicksand"}},a.createElement("h1",null,"React Neovis Example"),a.createElement(l.SD,{containerId:"id0",neo4jUri:"bolt://localhost:7687",neo4jUser:"neo4j",neo4jPassword:"abcd"}))}}}]);
-//# sourceMappingURL=component---src-pages-pubmednet-js-97d9d9351898328e938c.js.map
