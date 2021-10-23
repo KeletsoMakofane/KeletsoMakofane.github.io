@@ -15,6 +15,8 @@ import Neovis from "neovis.js/dist/neovis.js";
             neo4jPassword,
             searchname,
             collabweight,
+            startYear,
+            stopYear
         } = props;
 
 
@@ -26,11 +28,11 @@ import Neovis from "neovis.js/dist/neovis.js";
                 server_url: neo4jUri,
                 server_user: neo4jUser,
                 server_password: neo4jPassword,
-                encrypted: "ENCRYPTION_ON",
+                encrypted: "ENCRYPTION_OFF",
                 labels: {
                     "Author": {
                         caption: "name",
-                        size: "pagerank",
+                        size: "pagerank_citations",
                         community: 'auth_community',
                         title_properties: ["name"],
                         shape: "diamond",
@@ -47,11 +49,11 @@ import Neovis from "neovis.js/dist/neovis.js";
                         thickness: 'count',
                     }
                 },
-                 initial_cypher: "MATCH (a:Author {name: '" + searchname + "' }) CALL apoc.path.subgraphAll(a, {maxLevel: 2}) YIELD nodes, relationships WITH nodes, relationships MATCH (c)-[:WROTE]-(p:Paper)-[:WROTE]-(d) WHERE c IN nodes AND d IN nodes WITH c, d, collect(p.title) as titles, count(p) as collaborations WHERE collaborations >=" + collabweight + " CALL apoc.create.vRelationship(c, 'CO_AUTH', {titles:titles, count:collaborations}, d) YIELD rel as collab WHERE c.name < d.name RETURN c, d, collab;"
+                 initial_cypher: "MATCH (a:Author {name: '" + searchname + "' }) CALL apoc.path.subgraphAll(a, {maxLevel: 2}) YIELD nodes, relationships WITH nodes, relationships MATCH (c)-[:WROTE]-(p:Paper)-[:WROTE]-(d) WHERE c IN nodes AND d IN nodes AND toInteger(" + startYear + ") <= toInteger(p.year) <= toInteger(" + stopYear + ") WITH c, d, collect(p.title) as titles, count(p) as collaborations WHERE collaborations >=" + collabweight + " CALL apoc.create.vRelationship(c, 'CO_AUTH', {titles:titles, count:collaborations}, d) YIELD rel as collab WHERE c.name < d.name RETURN c, d, collab;"
             };
             const vis = new Neovis(config);
             vis.render();
-        }, [neo4jUri, neo4jUser, neo4jPassword, searchname, collabweight]);
+        }, [neo4jUri, neo4jUser, neo4jPassword, searchname, collabweight, startYear, stopYear]);
 
         return (
             <div
@@ -84,9 +86,9 @@ import Neovis from "neovis.js/dist/neovis.js";
 
     const ResponsiveNeoGraph = (props) => {
         const [resizeListener, sizes] = useResizeAware();
+        let height = sizes.width / 1.9
 
-        const height = sizes.width / 2.25;
-        const neoGraphProps = {...props, width: sizes.width, height: height};
+        const neoGraphProps = {...props, width: '100%', height: height};
         return (
             <div style={{position: "relative"}}>
                 {resizeListener}
