@@ -28,7 +28,7 @@ import Neovis from "neovis.js/dist/neovis.js";
                 server_url: neo4jUri,
                 server_user: neo4jUser,
                 server_password: neo4jPassword,
-                encrypted: "ENCRYPTION_OFF",
+                encrypted: "ENCRYPTION_ON",
                 labels: {
                     "Author": {
                         caption: "name",

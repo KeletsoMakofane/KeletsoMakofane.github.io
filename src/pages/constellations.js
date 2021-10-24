@@ -9,7 +9,7 @@ import { ThemeProvider } from 'styled-components';
 
 const NEO4J_URI =  "neo4j://graph.keletsomakofane.com";
 const NEO4J_USER = "neo4j";
-const NEO4J_PASSWORD = "gybsuv-merqaj-8Vuvsi";
+const NEO4J_PASSWORD = "july-analog-kermit-cipher-lunar-4215";
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
