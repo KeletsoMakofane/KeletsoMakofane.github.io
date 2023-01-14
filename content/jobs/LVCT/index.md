@@ -3,7 +3,7 @@ date: '2019-01-01'
 title: 'Member of Board of Directors'
 company: 'LVCT'
 location: 'Nairobi, Kenya'
-range: 'Jan 2019 - Current'
+range: '2019 - Current'
 url: 'https://lvcthealth.org/'
 ---
 

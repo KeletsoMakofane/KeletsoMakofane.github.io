@@ -60,7 +60,7 @@ const Contact = () => {
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        Currently open to collaborations involving social networks, causal inference, and HIV research. Please contact me if you think we might have common interests!
+        Currently looking for tenure-track assistant professorships in Epidemiology. As always, open to collaborations involving social networks, causal inference, and HIV research. Please contact me if you think we might have common interests!
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>

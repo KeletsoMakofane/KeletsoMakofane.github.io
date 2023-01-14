@@ -8,7 +8,7 @@ import { usePrefersReducedMotion } from '@hooks';
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   min-height: 100vh;
   padding: 0;
 
@@ -62,7 +62,6 @@ const Hero = () => {
   const four = (
     <div>
     <p>Social Network Epidemiologist</p>
-        <p>Post-Doctoral Fellow @ Harvard FXB Center for Health and Human Rights</p>
         </div>
   );
   const five = (
@@ -71,7 +70,11 @@ const Hero = () => {
     </a>
   );
 
-  const items = [ two, four];
+  const six = (
+      <div><p>Post-Doctoral Fellow at Harvard University</p></div>
+  )
+
+  const items = [ two, four, six];
 
   return (
     <StyledHeroSection>
