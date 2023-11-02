@@ -71,7 +71,9 @@ const Hero = () => {
   );
 
   const six = (
-      <div><p>Post-Doctoral Fellow at Harvard University</p></div>
+      <div>
+        <center>Post-Doctoral Fellow at Center for Causal Inference, University of Pennsylvania</center>
+      </div>
   )
 
   const items = [ two, four, six];
