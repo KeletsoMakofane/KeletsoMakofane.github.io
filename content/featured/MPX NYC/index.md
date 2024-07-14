@@ -9,4 +9,6 @@ tech:
 showInProjects: true
 ---
 
-In response to the outbreak of MPOX among queer and trans people around the world, I led an effort by New York-based activists and researchers to conduct the Rapid Epidemiologic Study of Prevalence, Network, and Demographics of MPOX Infection (RESPND-MI). This is a LGBTQ+ community-led survey of MPOX symptoms and networks among queer and trans people in New York City.
+In response to the outbreak of MPOX among queer and trans people around the world, I initiated an effort with New York-based activists and researchers called the Rapid Epidemiologic Study of Prevalence, Network, and Demographics of Mpox Infection (RESPND-MI). RESPND-MI conducted MPX NYC - an anonymous, online survey that collected information of the social and spatial networks connecting queer and trans people in New York City.
+
+
