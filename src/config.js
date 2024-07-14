@@ -7,10 +7,6 @@ module.exports = {
       url: 'https://github.com/KeletsoMakofane',
     },
     {
-      name: 'Twitter',
-      url: 'https://twitter.com/klts0',
-    },
-    {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/keletsom',
     },

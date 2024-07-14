@@ -126,7 +126,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['PhD in Social Network Epidemiology, Harvard University, United States', 'BBusSci in Actuarial Science, University of Cape Town, South Africa', 'MPH in Biostatistics, Columbia University, United States', 'Fulbright Alum'];
+  const skills = ['PhD in Social Network Epidemiology, Harvard University, United States', 'BBusSci in Actuarial Science, University of Cape Town, South Africa', 'MPH in Biostatistics, Columbia University, United States'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,11 +135,12 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>I'm fascinated with how human relationships shape population health. I came to this focus through different experiences: LGBT anti-violence organizing in Cape Town, survey research on health and human rights in Oakland, HIV policy advocacy in Geneva, and HIV programs for men who have sex with men in Johannesburg. At the heart of this work is the idea that people's health depends on their relationships with other people. These relationships provide or withhold love and support and, importantly, food, shelter and help.</p>
+          
+          <p>Dr. Keletso Makofane, MPH, PhD, is an activist, public health practitioner, and social network epidemiologist. His research focuses on the development and adaptation of methods in biostatistics and causal inference for use in population health studies. He conducts community-led research on HIV, mpox, and sexually transmitted infections.</p>
 
-<p>In my dissertation research, I investigated the impact of family relationships on health across large communities in South Africa. This theme eludes classical approaches to causal inference, which tend to treat people as if they were independent from one another.</p>
+<p>Dr. Makofane has published in academic journals such as The New England Journal of Medicine, The Lancet, and The Journal of the International AIDS Society. His work appears in publications such as The New York Times, The Washington Post, Wired, MSNBC, CBS News, Time Magazine, Out Magazine, Teen Vogue, Science, Scientific American, MIT Technology Review, National Public Radio, and STAT.</p>
 
-<p>I assumed the opposite and adapt and apply cutting-edge causal inference methods to answer the question: how do the resources of one person affect the health of another?</p>
+<p>He is currently a Postdoctoral Fellow at the University of Pennsylvania Center for Causal Inference and Principal Investigator of RESPND-MI, an anonymous, online survey that collects information of the social and spatial networks connecting queer and trans people in New York City. He served in the International AIDS Society-Lancet Commission on the Future of HIV Response and Global Health; and is a current member of the World Health Organization Strategic and Technical Advisory Committee on HIV, Sexually Transmitted Infections, and Viral Hepatitis, which advises the director general of the World Health Organization.</p>
 
 <p>Educational Background:</p>
             

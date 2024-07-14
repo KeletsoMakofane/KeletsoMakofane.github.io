@@ -2,7 +2,7 @@
 date: '5'
 title: 'Structural Racism in Scholarship'
 cover: './constellations_banner.png'
-external: 'https://the.constellationsproject.app'
+external: 'https://beta.constellationsproject.app'
 tech:
   - 
 
