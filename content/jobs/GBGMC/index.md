@@ -3,7 +3,7 @@ date: '2020-01-01'
 title: 'Board Member'
 company: 'GBGMC'
 location: 'New York, United States'
-range: '2019 - Current'
+range: '2019 - 2023'
 url: 'https://globalbgmc.org/'
 ---
 
