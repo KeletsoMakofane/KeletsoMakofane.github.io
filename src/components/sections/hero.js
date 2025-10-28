@@ -72,7 +72,7 @@ const Hero = () => {
 
   const six = (
       <div>
-        <center>Post-Doctoral Fellow at Center for Causal Inference, University of Pennsylvania</center>
+        <center>Co-founder, Ctrl+F</center>
       </div>
   )
 

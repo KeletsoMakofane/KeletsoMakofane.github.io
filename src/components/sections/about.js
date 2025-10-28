@@ -140,7 +140,7 @@ const About = () => {
 
 <p>Dr. Makofane has published in academic journals such as The New England Journal of Medicine, The Lancet, and The Journal of the International AIDS Society. His work appears in publications such as The New York Times, The Washington Post, Wired, MSNBC, CBS News, Time Magazine, Out Magazine, Teen Vogue, Science, Scientific American, MIT Technology Review, National Public Radio, and STAT.</p>
 
-<p>He is currently a Postdoctoral Fellow at the University of Pennsylvania Center for Causal Inference and Principal Investigator of RESPND-MI, an anonymous, online survey that collects information of the social and spatial networks connecting queer and trans people in New York City. He served in the International AIDS Society-Lancet Commission on the Future of HIV Response and Global Health; and is a current member of the World Health Organization Strategic and Technical Advisory Committee on HIV, Sexually Transmitted Infections, and Viral Hepatitis, which advises the director general of the World Health Organization.</p>
+<p>He is co-founder of <a href="https://www.controlf.info">Ctrl+F</a> and Principal Investigator of RESPND-MI, an anonymous, online survey that collects information of the social and spatial networks connecting queer and trans people in New York City. He served in the International AIDS Society-Lancet Commission on the Future of HIV Response and Global Health; and is a current member of the World Health Organization Strategic and Technical Advisory Committee on HIV, Sexually Transmitted Infections, and Viral Hepatitis, which advises the director general of the World Health Organization.</p>
 
 <p>Educational Background:</p>
             
